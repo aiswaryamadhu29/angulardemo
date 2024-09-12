@@ -1,0 +1,12 @@
+* Remove background color and border from the dropdown button */
+.btn-primary.dropdown-toggle {
+  background-color: transparent; /* Remove blue background */
+  border: none;                  /* Remove border */
+  box-shadow: none;              /* Remove box shadow */
+}
+
+/* Remove focus outline and box-shadow from the dropdown button */
+.btn-primary.dropdown-toggle:focus {
+  outline: none;     /* Remove focus outline */
+  box-shadow: none;  /* Remove focus box-shadow */
+}

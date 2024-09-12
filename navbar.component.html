@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">People10</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="d-flex justify-content-end w-100">
+        <ul class="navbar-nav mb-2 mb-lg-0 d-flex align-items-center me-auto">
+          <li class="nav-item dropdown me-2">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdown-basic-button" aria-expanded="false" (click)="toggleDropdown()">
+              Services
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdown-basic-button" *ngIf="isDropdownOpen">
+              <ng-container *ngFor="let category of getCategories()">
+                <li class="dropdown-header">{{ category }}</li>
+                <ng-container *ngFor="let item of getItems(category)">
+                  <li role="menuitem"><a class="dropdown-item" href="#">{{ item }}</a></li>
+                </ng-container>
+              </ng-container>
+            </ul>
+          </li>
+          <!-- Other dropdowns -->
+          <li class="btn-group me-2" dropdown>
+            <button id="button-animated-2" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown-animated-2">
+              Industries
+            </button>
+            <ul id="dropdown-animated-2" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-animated-2">
+              <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="btn-group me-2" dropdown>
+            <button id="button-animated-3" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown-animated-3">
+              Insights
+            </button>
+            <ul id="dropdown-animated-3" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-animated-3">
+              <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="btn-group me-2" dropdown>
+            <button id="button-animated-4" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown-animated-4">
+              Company
+            </button>
+            <ul id="dropdown-animated-4" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-animated-4">
+              <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item me-2">
+            <a class="nav-link active" aria-current="page" href="#">People</a>
+          </li>
+        </ul>
+       
+        <div class="d-flex align-items-center">
+          <button type="button" class="btn btn-primary">
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
